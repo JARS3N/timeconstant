@@ -1,0 +1,16 @@
+time_constant2 <- function(x){
+  #### might not be done yet
+  message('not yet ready for prime time')
+  ####
+  cumdif.counts<-diff(x$counts)
+  injection<-x$Time[which(cumdif.counts==min(cumdif.counts))-3]
+  period<-injection + 30
+  atmi<-abs(x$Time-injection)#abs_time_minus_injection
+  atmp<-abs(x$Time-period)#abs_time_minus_period
+  start<-x$counts[x$Time==x$Time[which(atmi==min(atmi))]]
+  endP<-x$counts[x$Time==x$Time[which(atmp)==min(atmp)]]
+  truncated_counts<-x$counts[which(atmp==min(atmp)):(length(x$Time)-4)]
+  delta_time<-start-lowest_avg_n_counts(truncated_counts)
+  delta_period<-start-endP
+  abs(period/(log(1/(1-(delta_period/delta_time)))))
+}

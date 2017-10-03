@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "Package: timeconstant\nType: Package\nTitle: timeconstant\nVersion: 0.1.0\nAuthor: J.Arsenault\nDate: 2017-1003\nMaintainer: Who to complain to <JARS3N@GMAIL.COM>\n  Description: determine pH time constant of sensors\nURL: https://github.com/JARS3N/timeconstant\nImports:\ndplyr,\nrio\nLicense: none\nEncoding: UTF-8\nLazyData: true\n",
+    "created" : 1507061237910.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "32657572",
+    "id" : "D157D6CB",
+    "lastKnownWriteTime" : 1507061314,
+    "last_content_update" : 1507061314627,
+    "path" : "C:/Rprojects/timeconstant/DESCRIPTION",
+    "project_path" : "DESCRIPTION",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "dcf"
+}

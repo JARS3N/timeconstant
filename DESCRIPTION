@@ -1,0 +1,15 @@
+Package: timeconstant
+Type: Package
+Title: timeconstant
+Version: 0.1.0
+Author: J.Arsenault
+Date: 2017-1003
+Maintainer: Who to complain to <JARS3N@GMAIL.COM>
+  Description: determine pH time constant of sensors
+URL: https://github.com/JARS3N/timeconstant
+Imports:
+dplyr,
+rio
+License: none
+Encoding: UTF-8
+LazyData: true
