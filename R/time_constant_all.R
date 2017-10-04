@@ -4,5 +4,5 @@ time_constant_all<-function(u){#where u is the directory of csv files to run
     lapply(.,time_constant::pre_process) %>%
     bind_rows(.) %>%
     group_by(.,Chan,fl) %>%
-    summarize(TC=time_constant::time_constant(data.frame(Time=Time,counts=counts)))
+    summarize(TC=timeconstant::time_constant(data.frame(Time=Time,counts=counts)))
 }
