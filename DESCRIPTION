@@ -8,8 +8,8 @@ Maintainer: Who to complain to <JARS3N@GMAIL.COM>
   Description: determine pH time constant of sensors
 URL: https://github.com/JARS3N/timeconstant
 Imports:
-    dplyr,
-    rio
+        dplyr,
+        rio
 License: none
 Encoding: UTF-8
 LazyData: true
