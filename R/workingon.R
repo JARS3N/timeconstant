@@ -16,15 +16,18 @@ TC_adj<-function(Time,counts){
 # using datapoint 61 as approx period of 30 seconds
 period <- Time[61] 
 deltaP <- counts[1] - counts[61]
-deltaT<-counts[1]*(exp(1)^-1)
+deltaT<- min_mean_5(counts)
+tau(period,deltaP,deltaT)
+}
+
+tau<-function(period,deltaP,deltaT){
 abs(period/(log(1/(1 - (deltaP/deltaT)))))
 }
 
-TC_adjx<-function(Time,counts){
-  # data capture@500ms, therefore
-  # using datapoint 61 as approx period of 30 seconds
-  period <- Time[61] 
-  deltaP <- counts[1] - counts[61]
-  deltaT<-counts[1]*(1-exp(1)^-1)
-  abs(period/(log(1/(1 - (deltaP/deltaT)))))
+min_mean_5<-function(U,n=5){
+  i<-seq_along(U)
+  A<-na.omit(lag(i,n-1))
+  B<-na.omit(lead(i,n-1))
+  mapd<-mapply(function(A,B){mean(U[A:B])},A,B)
+  min(mapd)
 }
